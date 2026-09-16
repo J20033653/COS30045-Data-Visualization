@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data Story | Australian Energy Insights</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="navbar">
+      <a href="index.html" class="brand">
+        <img src="assets/img/logo.svg" alt="Power logo — return to Home" />
+        <span>Energy Insights</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="televisions.html">Televisions</a></li>
+        <li><a href="data-story.html" class="active">Data Story</a></li>
+        <li><a href="about.html">About Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Which TV Should You Buy If You Care About Your Power Bill?</h1>
+      <p>
+        This page tells the story behind our television energy consumption
+        dataset for three audiences: <strong>consumers</strong> shopping for
+        an energy-efficient TV, <strong>policy makers</strong> tracking
+        household energy trends, and <strong>researchers</strong> studying
+        efficiency in consumer electronics. Two questions matter most to
+        them: does a bigger screen always mean higher running costs, and
+        does the Australian Energy Rating star label actually predict lower
+        energy use?
+      </p>
+    </section>
+
+    <section>
+      <h2>1. Bigger screens use more power — but technology matters too</h2>
+      <p>
+        The chart below plots each television's screen size against its
+        estimated annual energy consumption, grouped by panel technology
+        (LED, QLED, OLED). As expected, energy use climbs steadily with
+        screen size. But at the same size, the technology used makes a real
+        difference — OLED panels in this dataset tend to sit at the higher
+        end of energy use for their size, while LED panels are generally the
+        most efficient. For a size-conscious, budget-conscious buyer, this
+        means the panel type is just as important a decision as the number
+        of inches on the box.
+      </p>
+      <div class="card">
+        <canvas id="sizeChart" role="img" aria-label="Scatter chart of screen size versus annual energy consumption, grouped by LED, QLED and OLED technology"></canvas>
+      </div>
+    </section>
+
+    <section>
+      <h2>2. The star rating is a reliable shortcut</h2>
+      <p>
+        Rather than comparing raw kWh figures across dozens of models,
+        most shoppers rely on the Australian Energy Rating star label. The
+        chart below groups our dataset by star rating and shows the average
+        annual energy use for each group. The relationship is clear and
+        consistent: every half-star increase corresponds to a meaningful
+        drop in average annual energy use. This confirms the star rating is
+        a trustworthy, low-effort signal for consumers who don't want to dig
+        into technical specifications — and a useful benchmark for
+        policy makers assessing whether the labelling scheme is doing its
+        job.
+      </p>
+      <div class="card">
+        <canvas id="ratingChart" role="img" aria-label="Bar chart of average annual energy use grouped by star rating"></canvas>
+      </div>
+    </section>
+
+    <section>
+      <h2>Take-away</h2>
+      <div class="card-grid">
+        <div class="card">
+          <h3>For Consumers</h3>
+          <p>Check the star rating first, then the panel technology.
+            A smaller, higher-rated LED TV can cost noticeably less to run
+            each year than a larger OLED of the same star band.</p>
+        </div>
+        <div class="card">
+          <h3>For Policy Makers</h3>
+          <p>The star rating scheme shows a clear, consistent relationship
+            with energy use in this sample, supporting its continued use as
+            a household energy-reduction tool.</p>
+        </div>
+        <div class="card">
+          <h3>For Researchers</h3>
+          <p>Screen size alone is not a sufficient predictor of energy use;
+            panel technology is a confounding factor worth controlling for
+            in further analysis.</p>
+        </div>
+      </div>
+      <p><em>Note: figures used in this story are illustrative placeholder
+        values built for this exercise, not measurements from a verified
+        external dataset — see "About the Data" in the project README for
+        full details and limitations.</em></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Elijah Mokhtar Philips</p>
+    <p class="genai-note">Generative AI (ChatGPT/Claude) was used to assist with drafting placeholder content, chart code, and narrative structure for this exercise.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+  <script src="assets/js/tv-data.js"></script>
+  <script src="assets/js/data-story.js"></script>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
