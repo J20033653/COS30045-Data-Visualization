@@ -9,6 +9,9 @@ The exercises in this folder guide you through the fundamental concepts needed t
 - **Exercise 4.1 – Draw SVGs**  
   Learn how to create SVG elements that are used to draw graphics on a webpage.
 
+- **Exercise 4.2 – Manipulate and add elements to a webpage with D3**  
+  Use D3 to style existing elements and append new paragraph/SVG elements to the DOM.
+
 - **Exercise 4.3 – D3 setup**  
   Set up the D3 library in your webpage.
 
@@ -20,3 +23,6 @@ The exercises in this folder guide you through the fundamental concepts needed t
 
 - **Exercise 4.6 – Scaling charts**  
   Use D3 scales to map data values to positions in a chart.
+
+- **Exercise 4.7 – Grouping bars with labels**  
+  Group each bar with its text labels using `<g>` elements for a labelled chart.
