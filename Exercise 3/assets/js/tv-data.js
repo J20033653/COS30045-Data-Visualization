@@ -1,8 +1,3 @@
-// COS30045 Exercise 3 — TV Energy Consumption dataset (illustrative)
-// Figures are illustrative placeholder values modelled on typical Australian
-// Energy Rating Label ranges for LED/OLED/QLED televisions. See the
-// "About the Data" section of README.md for details and limitations.
-
 const tvData = [
   { model: "32\" LED",  size: 32, technology: "LED",  starRating: 5.0, annualKWh: 55 },
   { model: "32\" LED",  size: 32, technology: "LED",  starRating: 4.5, annualKWh: 65 },

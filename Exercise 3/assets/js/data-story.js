@@ -1,5 +1,3 @@
-// COS30045 Exercise 3 — renders the two data-story charts with Chart.js
-
 document.addEventListener("DOMContentLoaded", function () {
   if (typeof Chart === "undefined" || typeof tvData === "undefined") return;
 
@@ -11,7 +9,6 @@ document.addEventListener("DOMContentLoaded", function () {
     text: "#586e75",
   };
 
-  // ---- Chart 1: Screen size vs annual energy use, by technology ----
   const techs = ["LED", "QLED", "OLED"];
   const scatterDatasets = techs.map(function (tech) {
     return {
@@ -56,7 +53,6 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   });
 
-  // ---- Chart 2: Average energy use by star rating ----
   const byRating = {};
   tvData.forEach(function (d) {
     if (!byRating[d.starRating]) byRating[d.starRating] = [];

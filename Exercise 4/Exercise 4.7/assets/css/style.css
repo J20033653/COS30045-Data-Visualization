@@ -1,8 +1,3 @@
-/* ==========================================================
-   COS30045 Exercise 0.2 — Energy Website
-   Solarized Light theme
-   ========================================================== */
-
 :root {
   --base03: #002b36;
   --base02: #073642;
@@ -40,8 +35,6 @@ body {
   flex-direction: column;
   min-height: 100vh;
 }
-
-/* ---------- Navigation ---------- */
 
 .site-header {
   background-color: var(--base2);
@@ -108,8 +101,6 @@ body {
   background-color: var(--orange);
   color: var(--base3);
 }
-
-/* ---------- Main content ---------- */
 
 main {
   flex: 1;
@@ -189,8 +180,6 @@ tr:nth-child(even) td {
   background-color: var(--base3);
 }
 
-/* ---------- FAQ Accordion ---------- */
-
 .faq {
   margin-top: 2.5rem;
 }
@@ -247,8 +236,6 @@ tr:nth-child(even) td {
   padding: 1rem 1.25rem;
 }
 
-/* ---------- Team / About page ---------- */
-
 .profile {
   display: flex;
   gap: 1.5rem;
@@ -274,8 +261,6 @@ tr:nth-child(even) td {
   flex-shrink: 0;
 }
 
-/* ---------- Footer ---------- */
-
 footer {
   background-color: var(--base02);
   color: var(--base2);
@@ -292,8 +277,6 @@ footer .genai-note {
   color: var(--base1);
   font-size: 0.8rem;
 }
-
-/* ---------- D3 responsive SVG container ---------- */
 
 .responsive-svg-container {
   margin-right: auto;
