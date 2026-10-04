@@ -1,53 +1,25 @@
-# Exercise 5 – Multi-Chart Webpage
+# Exercise 5 – Multi-chart page
 
-## Aim
-Create a variety of different chart types using **D3.js**.
+One page, `index.html`, with four D3 charts. Each chart has its own script in `assets/js/` and its own CSV in `data/`.
 
-## Purpose
-In previous exercises, we created simple charts such as a horizontal bar chart. In this exercise, you will extend your skills by building multiple chart types and presenting them on a webpage.
+| Chart | Script | Data |
+|---|---|---|
+| Scatter: energy vs star rating | `scatter-plot.js` | `scatter.csv` |
+| Donut: TVs by screen size | `donut-chart.js` | `Data_exercise_5.3.csv` |
+| Bar: average energy by screen technology, 55-inch TVs | `bar-chart.js` | `Data_exercise_5.1.csv` |
+| Line: average spot price, 1998–2024 | `line-chart.js` | `spot_prices.csv` |
 
-This activity focuses on using **D3 to visualise different types of data** and understanding when different charts are appropriate.
+## Data
 
-## Charts to Create
+The donut, bar and line charts use the files supplied for the exercise. The line chart plots the `Average Price (notTas-Snowy)` column rather than one line per state.
 
-Using the provided **TV energy consumption dataset** (or your own dataset), your webpage must include the following chart types:
+`scatter.csv` is my own cut of the registry export from KNIME (`tv_2026_02_15.csv`, 4,724 TVs): star rating and labelled energy use for every TV. The other files come from a cleaned copy, so totals differ a little between charts.
 
-- **Scatter Plot**  
-  Energy consumption vs star rating.
+## Notes
 
-- **Donut Chart**  
-  Energy consumption for different screen technologies across all TVs combined.
+- Star ratings are discrete, so the scatter dots stack in columns.
+- The donut counts TVs, not energy use.
 
-- **Bar Chart**  
-  Energy consumption for different screen technologies for **55-inch TVs only**.
+## AI Declaration
 
-- **Line Chart**  
-  Spot power prices from **1998 to 2024** (either plot the average or include a line for each state).
-
-You may use the **provided datasets** or your **own dataset**, but your webpage must include **one example of each chart type**.
-
-## Preparation
-
-Before starting this exercise, it is recommended that you:
-
-- Review this week's **lecture slides**
-- Review **Chapter 4 and Chapter 5 of Dufour and Meeks (2024)**
-
-## Instructions
-
-Use the **forked repository that you created earlier for this unit**.
-
-1. Open your existing **forked repository**.
-2. Navigate to the **Exercise 5 folder**.
-3. Add your code and files for this exercise inside that folder.
-4. Build a webpage that displays the required charts using **D3.js**.
-5. Commit and push your changes regularly to your GitHub repository.
-
-## Submission
-
-Your **forked repository** will serve as your submission.
-
-Ensure that:
-- All Exercise 5 files are inside the **Exercise 5 folder**
-- Your code is pushed to GitHub
-- Your repository link is submitted through the submission system.
+Claude (through Claude Code) helped with debugging & writing the page

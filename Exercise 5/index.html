@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Charts | Australian Energy Insights</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="navbar">
+      <a href="index.html" class="brand">
+        <img src="assets/img/logo.svg" alt="Power logo — return to top" />
+        <span>Energy Insights</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#scatter">Scatter</a></li>
+        <li><a href="#donut">Donut</a></li>
+        <li><a href="#bar">Bar</a></li>
+        <li><a href="#line">Line</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>TV Energy Consumption: Four Views</h1>
+      <p>
+        Four chart types built with D3, using the Australian television
+        energy rating data. Each chart answers a different question about
+        how much energy TVs use, and what electricity costs.
+      </p>
+    </section>
+
+    <section id="scatter">
+      <h2>Energy consumption vs star rating</h2>
+      <p>
+        Each dot is one TV model. Higher star ratings should mean lower
+        energy use, but screen size pulls the other way, so the trend is
+        noisy.
+      </p>
+      <div id="scatter-plot" class="responsive-svg-container"></div>
+    </section>
+
+    <section id="donut">
+      <h2>TVs by screen size</h2>
+      <p>
+        How the TVs in the dataset split into small, medium and large
+        screens. Medium-sized TVs are the biggest group, with large
+        screens not far behind.
+      </p>
+      <div id="donut-chart" class="responsive-svg-container"></div>
+    </section>
+
+    <section id="bar">
+      <h2>Average energy for 55-inch TVs</h2>
+      <p>
+        Comparing technologies fairly means comparing the same size, and
+        55 inches is the most common size in the dataset.
+      </p>
+      <div id="bar-chart" class="responsive-svg-container"></div>
+    </section>
+
+    <section id="line">
+      <h2>Electricity spot prices, 1998 to 2024</h2>
+      <p>
+        The average annual wholesale electricity price in Australia, which
+        sets the running cost behind every kilowatt-hour a TV uses.
+      </p>
+      <div id="line-chart" class="responsive-svg-container"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Elijah Mokhtar Philips</p>
+    <p class="genai-note">Generative AI (Claude) was used to help write the code for this exercise. See the README for details.</p>
+  </footer>
+
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="assets/js/script.js"></script>
+  <script src="assets/js/scatter-plot.js"></script>
+  <script src="assets/js/donut-chart.js"></script>
+  <script src="assets/js/bar-chart.js"></script>
+  <script src="assets/js/line-chart.js"></script>
+</body>
+</html>
