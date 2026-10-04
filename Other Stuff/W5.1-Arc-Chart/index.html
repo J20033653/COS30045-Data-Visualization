@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>W5.1 Drawing Arcs - Days with Precipitation</title>
+
+  <!-- D3.js v7 (loaded from CDN) -->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+
+  <!-- Page styling -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>2024 Melbourne Weather</h1>
+    <p class="subtitle">Week 5.1 &mdash; Drawing with Lines and Arcs (Arc / Donut Chart)</p>
+  </header>
+
+  <main>
+    <!-- =====================================================
+         ARC CHART CONTAINER
+         Follows the layout style used in the lecture slides:
+         a small card/column that holds a heading + the chart's
+         responsive svg wrapper. The <div id="arc"> is the
+         mount point the JS looks for with d3.select("#arc").
+    ====================================================== -->
+    <div class="col col-3">
+      <h2>Days with Precipitation</h2>
+      <p class="chart-description">
+        Percentage of days in 2024 that recorded measurable rainfall in
+        Melbourne. Drawn as an arc (donut) chart using
+        <code>d3.arc()</code> in a polar coordinate system.
+      </p>
+
+      <div class="responsive-svg-container small">
+        <div id="arc"></div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>Data: synthetic 2024 Melbourne daily rainfall dataset (<code>data/2024MelbRainfall.csv</code>)</p>
+  </footer>
+
+  <!-- Embedded fallback copy of the CSV data (used only if the CSV
+       fetch below fails, e.g. when this file is opened directly via
+       file:// instead of through a local server) -->
+  <script src="js/data.js"></script>
+
+  <!-- Our chart-drawing script (loaded last, after D3 and the DOM exist) -->
+  <script src="js/arc.js"></script>
+</body>
+</html>

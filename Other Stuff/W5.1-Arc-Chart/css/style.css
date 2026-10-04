@@ -1,0 +1,103 @@
+/* ===========================================================
+   W5.1 Drawing with lines and arcs - basic page styling
+   =========================================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 2rem;
+  font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+  background-color: #f7f7f5;
+  color: #2c2c2c;
+}
+
+header {
+  max-width: 700px;
+  margin: 0 auto 2rem auto;
+  text-align: center;
+}
+
+header h1 {
+  margin-bottom: 0.25rem;
+}
+
+.subtitle {
+  color: #6b6b6b;
+  margin-top: 0;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+/* ---------------------------------------------------------
+   Column layout, mirrors the "col col-3" pattern from the
+   lecture slides for laying charts out side by side.
+--------------------------------------------------------- */
+.col {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  max-width: 360px;
+  width: 100%;
+  text-align: center;
+}
+
+.col h2 {
+  margin-top: 0;
+  font-size: 1.15rem;
+}
+
+.chart-description {
+  font-size: 0.85rem;
+  color: #6b6b6b;
+  line-height: 1.4;
+}
+
+/* ---------------------------------------------------------
+   Responsive svg container
+   Keeps the arc chart square and scales it with the width
+   of its parent column, using the viewBox set in arc.js
+--------------------------------------------------------- */
+.responsive-svg-container {
+  position: relative;
+  width: 100%;
+}
+
+.responsive-svg-container.small {
+  max-width: 300px;
+  margin: 1rem auto 0 auto;
+}
+
+.responsive-svg-container svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Arc paths */
+.arc-value {
+  transition: opacity 0.2s ease;
+}
+
+.arc-value:hover {
+  opacity: 0.85;
+}
+
+.arc-label {
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+footer {
+  max-width: 700px;
+  margin: 3rem auto 0 auto;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #8a8a8a;
+}
