@@ -7,4 +7,4 @@ The `viewBox` is now 500 by 500, and the chart uses two scales:
 
 ## AI Declaration
 
-Claude (through Claude Code) wrote the code and this README.
+Claude (through Claude Code) helped with debugging

@@ -8,4 +8,4 @@ I used `data/export.csv` instead of `../data/...` because `index.html` sits next
 
 ## AI Declaration
 
-Claude (through Claude Code) wrote the code and this README.
+Claude (through Claude Code) helped with debugging

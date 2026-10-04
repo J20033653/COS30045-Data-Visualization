@@ -6,4 +6,4 @@ There are no scales yet, so Samsung (1096) almost fills the 1200-wide canvas. Sc
 
 ## AI Declaration
 
-Claude (through Claude Code) wrote the code and this README.
+Claude (through Claude Code) helped with debugging

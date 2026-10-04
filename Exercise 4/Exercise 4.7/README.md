@@ -6,4 +6,4 @@ The bars start at x=100 to leave space for the brand names. The scales are the s
 
 ## AI Declaration
 
-Claude (through Claude Code) wrote the code and this README.
+Claude (through Claude Code) helped with debugging.
