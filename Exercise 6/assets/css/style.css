@@ -1,0 +1,334 @@
+:root {
+  --base03: #002b36;
+  --base02: #073642;
+  --base01: #586e75;
+  --base00: #657b83;
+  --base0:  #839496;
+  --base1:  #93a1a1;
+  --base2:  #eee8d5;
+  --base3:  #fdf6e3;
+  --yellow: #b58900;
+  --orange: #cb4b16;
+  --red:    #dc322f;
+  --blue:   #268bd2;
+  --cyan:   #2aa198;
+  --green:  #859900;
+
+  --font-main: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--base3);
+  color: var(--base00);
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.site-header {
+  background-color: var(--base2);
+  border-bottom: 3px solid var(--blue);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0.5rem 1.5rem;
+  flex-wrap: wrap;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+  color: var(--base01);
+}
+
+.brand img {
+  width: 44px;
+  height: 44px;
+  display: block;
+}
+
+.brand span {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--orange);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  display: inline-block;
+  padding: 0.6rem 1rem;
+  text-decoration: none;
+  color: var(--base01);
+  font-weight: 600;
+  border-radius: 4px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.nav-links li a:hover {
+  background-color: var(--blue);
+  color: var(--base3);
+}
+
+.nav-links li a.active {
+  background-color: var(--orange);
+  color: var(--base3);
+}
+
+main {
+  flex: 1;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 3rem;
+  width: 100%;
+}
+
+.hero {
+  background-color: var(--base2);
+  border-left: 6px solid var(--blue);
+  padding: 1.5rem 2rem;
+  border-radius: 6px;
+  margin-bottom: 2rem;
+}
+
+h1, h2, h3 {
+  color: var(--base02);
+}
+
+h1 {
+  margin-top: 0;
+  color: var(--orange);
+}
+
+a {
+  color: var(--blue);
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+  margin: 1.5rem 0;
+}
+
+.card {
+  background-color: var(--base2);
+  border: 1px solid var(--base1);
+  border-top: 4px solid var(--cyan);
+  border-radius: 6px;
+  padding: 1.25rem;
+}
+
+.card h3 {
+  margin-top: 0;
+  color: var(--cyan);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  background-color: var(--base2);
+}
+
+caption {
+  text-align: left;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--base01);
+}
+
+th, td {
+  text-align: left;
+  padding: 0.6rem 0.9rem;
+  border: 1px solid var(--base1);
+}
+
+th {
+  background-color: var(--blue);
+  color: var(--base3);
+}
+
+tr:nth-child(even) td {
+  background-color: var(--base3);
+}
+
+.faq {
+  margin-top: 2.5rem;
+}
+
+.faq-item {
+  border: 1px solid var(--base1);
+  border-radius: 6px;
+  margin-bottom: 0.75rem;
+  overflow: hidden;
+  background-color: var(--base2);
+}
+
+.faq-question {
+  width: 100%;
+  text-align: left;
+  background-color: var(--base2);
+  border: none;
+  padding: 1rem 1.25rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--base02);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background-color 0.2s ease;
+}
+
+.faq-question:hover {
+  background-color: var(--base1);
+  color: var(--base3);
+}
+
+.faq-question .icon {
+  font-weight: 700;
+  color: var(--orange);
+  transition: transform 0.2s ease;
+}
+
+.faq-question[aria-expanded="true"] .icon {
+  transform: rotate(45deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.25s ease, padding 0.25s ease;
+  padding: 0 1.25rem;
+  background-color: var(--base3);
+}
+
+.faq-answer.open {
+  max-height: 300px;
+  padding: 1rem 1.25rem;
+}
+
+.profile {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  background-color: var(--base2);
+  border-radius: 6px;
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.profile .avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-color: var(--blue);
+  color: var(--base3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+footer {
+  background-color: var(--base02);
+  color: var(--base2);
+  text-align: center;
+  padding: 1.25rem 1rem;
+  font-size: 0.9rem;
+}
+
+footer p {
+  margin: 0.25rem 0;
+}
+
+footer .genai-note {
+  color: var(--base1);
+  font-size: 0.8rem;
+}
+
+.responsive-svg-container {
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.responsive-svg-container svg {
+  display: block;
+  background-color: var(--base2);
+  border-radius: 6px;
+}
+
+.line { fill: none; stroke: var(--orange); stroke-width: 2.5; }
+.line-dot { fill: var(--orange); }
+
+.responsive-svg-container text { fill: var(--base01); font-family: var(--font-main); }
+.responsive-svg-container .domain,
+.responsive-svg-container .tick line { stroke: var(--base1); }
+.axis-label { font-size: 14px; }
+.bar-label { font-size: 13px; font-weight: 600; }
+.donut-label { font-size: 13px; font-weight: 600; fill: var(--base3); }
+.responsive-svg-container .donut-label { fill: var(--base3); }
+.donut-total { font-size: 28px; font-weight: 700; }
+.donut-caption { font-size: 13px; }
+.legend-label { font-size: 14px; }
+.chart-error { color: var(--red); }
+
+section { margin-bottom: 2.5rem; }
+
+#donut-chart { max-width: 600px; }
+
+.filters { display: flex; gap: 0.5rem; flex-wrap: wrap; margin: 1rem 0 0.5rem; }
+
+.filter {
+  font: inherit;
+  font-weight: 600;
+  padding: 0.5rem 1.1rem;
+  border: 2px solid var(--blue);
+  border-radius: 4px;
+  background-color: var(--base3);
+  color: var(--blue);
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.filter:hover { background-color: var(--base2); }
+.filter.active { background-color: var(--blue); color: var(--base3); }
+.chart-summary { margin: 0.25rem 0 0.75rem; font-weight: 600; color: var(--base01); }
+
+.tooltip rect { fill: var(--base3); stroke: var(--base1); stroke-width: 1; }
+.responsive-svg-container .tooltip text { font-size: 13px; fill: var(--base02); }
+.responsive-svg-container .tooltip .tooltip-title { font-weight: 700; }
+.dot-active { fill-opacity: 1; stroke: var(--base02); stroke-width: 1.5; }

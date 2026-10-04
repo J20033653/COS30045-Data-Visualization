@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interactive Charts | Australian Energy Insights</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="navbar">
+      <a href="index.html" class="brand">
+        <img src="assets/img/logo.svg" alt="Power logo — return to top" />
+        <span>Energy Insights</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#histogram-section">Histogram</a></li>
+        <li><a href="#scatterplot-section">Scatterplot</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Exploring TV Energy Use Interactively</h1>
+      <p>
+        Filter and explore the Australian television energy rating data.
+        Choose a screen technology to see how its energy consumption is
+        distributed.
+      </p>
+    </section>
+
+    <section id="histogram-section">
+      <h2>How much energy do TVs use?</h2>
+      <p>
+        Each bar counts the TVs whose labelled energy consumption falls in
+        a 100 kWh/year range. Most TVs use under 600 kWh a year, with a
+        few power-hungry outliers stretching the chart to the right.
+      </p>
+      <div id="filters_screen" class="filters"></div>
+      <div id="filters_size" class="filters"></div>
+      <p id="histogram-summary" class="chart-summary"></p>
+      <div id="histogram" class="responsive-svg-container"></div>
+    </section>
+
+    <section id="scatterplot-section">
+      <h2>Does a higher star rating mean less energy?</h2>
+      <p>
+        Each dot is one TV. Colour shows the screen technology, and hovering
+        over a dot shows its screen size, brand and energy use. Higher star
+        ratings sit lower on the chart, but the spread within each rating
+        is wide.
+      </p>
+      <div id="scatterplot" class="responsive-svg-container"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Elijah Mokhtar Philips</p>
+    <p class="genai-note">Generative AI (Claude) was used to help write the code for this exercise. See the README for details.</p>
+  </footer>
+
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="assets/js/script.js"></script>
+  <script src="assets/js/shared-constants.js"></script>
+  <script src="assets/js/histogram.js"></script>
+  <script src="assets/js/scatterplot.js"></script>
+  <script src="assets/js/interactions.js"></script>
+  <script src="assets/js/load-data.js"></script>
+</body>
+</html>

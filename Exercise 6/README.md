@@ -63,3 +63,21 @@ Before starting, review:
 5. Commit and push your changes regularly to GitHub.
 
 Your forked repository will serve as your **submission record**.
+
+---
+
+## What I built
+
+`index.html` has a histogram and a scatterplot, both using `data/Ex6_TVdata_withStar.csv`, the supplied dataset of 4,233 TVs.
+
+**Histogram:** energy use in 100 kWh bins. Two rows of buttons filter by screen technology (All, LED, LCD, OLED) and screen size (All sizes, 24", 32", 55", 65", 98"). The two filters combine, the bars animate to the new data, and a line under the buttons shows the TV count and median energy use. The y axis rescales for each selection.
+
+**Scatterplot:** star rating against energy use, with dots coloured by screen technology (legend top right). Hovering a dot shows a tooltip with its screen size, brand, technology, energy use and star rating.
+
+**Files:** `shared-constants.js` (sizes, colours, filter lists, bin generator), `histogram.js`, `scatterplot.js`, `interactions.js` (filters and tooltip) and `load-data.js` (loads the CSV once and calls everything).
+
+I didn't build the optional extension to filter the scatterplot.
+
+## AI Declaration
+
+Claude (through Claude Code) helped with debugging & writing the page
